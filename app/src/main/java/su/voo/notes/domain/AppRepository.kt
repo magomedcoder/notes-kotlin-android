@@ -5,6 +5,8 @@ import su.voo.notes.data.model.Note
 
 interface AppRepository {
 
+    suspend fun insertNote(note: Note)
+
     fun getAllNotes(): Flow<List<Note>>
 
 }
