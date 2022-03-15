@@ -5,7 +5,11 @@ import su.voo.notes.databinding.FragmentHomeBinding
 import android.view.View
 import android.os.Bundle
 import androidx.fragment.app.viewModels
+import dagger.hilt.android.AndroidEntryPoint
+import android.view.LayoutInflater
+import android.view.ViewGroup
 
+@AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     private val viewModel: HomeViewModel by viewModels()
@@ -14,4 +18,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         super.onViewCreated(view, savedInstanceState)
     }
 
+    override fun initBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ) = FragmentHomeBinding.inflate(inflater, container, false)
 }
