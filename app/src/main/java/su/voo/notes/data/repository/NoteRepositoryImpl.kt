@@ -20,4 +20,11 @@ class NoteRepositoryImpl(
 
     override fun getOneNote(id: Int) = dao.getOneNote(id)
 
+    override suspend fun updateNote(note: Note) {
+        if (note.title.isEmpty()) {
+            dao.updateNote(Note(title = "Новая заметка", content = note.content))
+        } else {
+            dao.updateNote(note)
+        }
+    }
 }

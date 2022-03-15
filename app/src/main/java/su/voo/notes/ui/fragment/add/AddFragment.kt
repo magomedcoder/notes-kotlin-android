@@ -17,11 +17,21 @@ import su.voo.notes.R
 class AddFragment : BaseFragment<FragmentAddBinding>() {
 
     private val viewModel: AddViewModel by viewModels()
+    private val navigationArgs: AddFragmentArgs by navArgs()
+    private lateinit var note: Note
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnAddNote.setOnClickListener {
-            insertNote()
+        val id = navigationArgs.id
+        if (id > 0) {
+            viewModel.getOneNote(id).observe(this.viewLifecycleOwner) { selectedNote ->
+                note = selectedNote
+                bindUpdate(note)
+            }
+        } else {
+            binding.btnAddNote.setOnClickListener {
+                insertNote()
+            }
         }
         binding.btnGoBack.setOnClickListener {
             findNavController().navigate(R.id.action_add_edit_to_home)
@@ -31,6 +41,27 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
     private fun insertNote() {
         viewModel.insertNote(
             Note(
+                title = binding.edTitle.text.toString(),
+                content = binding.edContent.text.toString()
+            )
+        )
+        findNavController().navigate(R.id.action_add_edit_to_home)
+    }
+
+    private fun bindUpdate(note: Note) {
+        binding.apply {
+            edTitle.setText(note.title)
+            edContent.setText(note.content)
+            btnAddNote.setOnClickListener {
+                updateNote(note)
+            }
+        }
+    }
+
+    private fun updateNote(note: Note) {
+        viewModel.updateNote(
+            Note(
+                id = navigationArgs.id,
                 title = binding.edTitle.text.toString(),
                 content = binding.edContent.text.toString()
             )

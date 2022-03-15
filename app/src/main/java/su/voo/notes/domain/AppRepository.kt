@@ -11,4 +11,6 @@ interface AppRepository {
 
     fun getOneNote(id: Int): Flow<Note>
 
+    suspend fun updateNote(note: Note)
+
 }

@@ -13,7 +13,7 @@ import su.voo.notes.data.repository.NoteRepositoryImpl
 
 @Module
 @InstallIn(SingletonComponent::class)
-object NoteModule {
+object AppModule {
 
     @Singleton
     @Provides

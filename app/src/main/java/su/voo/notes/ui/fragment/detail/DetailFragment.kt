@@ -23,7 +23,6 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val id = navigationArgs.id
-
         viewModel.getOneNote(id).observe(this.viewLifecycleOwner) { selectedNote ->
             note = selectedNote
             binding.apply {
@@ -31,7 +30,11 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>() {
                 tvContent.text = note.content
             }
         }
-
+        binding.btnEdit.setOnClickListener {
+            val action = DetailFragmentDirections
+                .actionDetailToAddEdit(note.id!!)
+            findNavController().navigate(action)
+        }
         binding.btnGoBack.setOnClickListener {
             findNavController().navigate(R.id.action_detail_to_home)
         }
