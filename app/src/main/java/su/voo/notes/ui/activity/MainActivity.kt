@@ -1,7 +1,8 @@
-package su.voo.notes
+package su.voo.notes.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import su.voo.notes.R
 
 class MainActivity : AppCompatActivity() {
 
