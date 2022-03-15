@@ -4,29 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/home">
-
     <fragment
         android:id="@+id/home"
         android:name="su.voo.notes.ui.fragment.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
-
         <action
-            android:id="@+id/action_noteListFragment_to_noteAddFragment"
+            android:id="@+id/action_homeFragment_to_addFragment"
             app:destination="@id/add_edit"
             app:popUpToInclusive="false" />
-
+        <action
+            android:id="@+id/action_home_to_detail"
+            app:destination="@id/detail"
+            app:popUpToInclusive="false" />
     </fragment>
-
     <fragment
         android:id="@+id/add_edit"
         android:name="su.voo.notes.ui.fragment.add.AddFragment"
         android:label="fragment_add"
         tools:layout="@layout/fragment_add">
+        <action
+            android:id="@+id/action_add_edit_to_home"
+            app:destination="@id/home"
+            app:popUpTo="@id/home"
+            app:popUpToInclusive="true" />
         <argument
             android:name="id"
             android:defaultValue="0"
             app:argType="integer" />
     </fragment>
 
+    <fragment
+        android:id="@+id/detail"
+        android:name="su.voo.notes.ui.fragment.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <action
+            android:id="@+id/action_detail_to_add_edit"
+            app:destination="@id/add_edit" />
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detail_to_home"
+            app:destination="@id/home"
+            app:popUpTo="@id/home"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
