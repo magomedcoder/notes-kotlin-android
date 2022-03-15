@@ -9,4 +9,6 @@ interface AppRepository {
 
     fun getAllNotes(): Flow<List<Note>>
 
+    fun getOneNote(id: Int): Flow<Note>
+
 }

@@ -18,4 +18,6 @@ class NoteRepositoryImpl(
 
     override fun getAllNotes() = dao.getAllNotes()
 
+    override fun getOneNote(id: Int) = dao.getOneNote(id)
+
 }
