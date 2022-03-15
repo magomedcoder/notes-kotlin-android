@@ -10,6 +10,23 @@
         android:name="su.voo.notes.ui.fragment.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_noteListFragment_to_noteAddFragment"
+            app:destination="@id/add_edit"
+            app:popUpToInclusive="false" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_edit"
+        android:name="su.voo.notes.ui.fragment.add.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add">
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
 
 </navigation>
