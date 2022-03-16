@@ -26,8 +26,12 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>() {
         viewModel.getOneNote(id).observe(this.viewLifecycleOwner) { selectedNote ->
             note = selectedNote
             binding.apply {
-                tvTitle.text = note.title
-                tvContent.text = note.content
+                title.text = note.title
+                content.text = note.content
+                btnDelete.setOnClickListener {
+                    viewModel.deleteNote(note)
+                    findNavController().navigate(R.id.action_detail_to_home)
+                }
             }
         }
         binding.btnEdit.setOnClickListener {

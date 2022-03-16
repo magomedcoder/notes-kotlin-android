@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 import su.voo.notes.data.model.Note
 import androidx.room.Insert
 import androidx.room.Update
-
+import androidx.room.Delete
 @Dao
 interface NoteDao {
 
@@ -24,5 +24,8 @@ interface NoteDao {
 
     @Query("SELECT * FROM voo_note_db WHERE title LIKE :searchQuery")
     fun searchDatabase(searchQuery: String): Flow<List<Note>>
+
+    @Delete
+    suspend fun deleteNote(note: Note)
 
 }

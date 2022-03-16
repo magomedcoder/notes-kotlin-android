@@ -30,4 +30,6 @@ class NoteRepositoryImpl(
 
     override fun searchDatabase(searchQuery: String) = dao.searchDatabase(searchQuery)
 
+    override suspend fun deleteNote(note: Note) = dao.deleteNote(note)
+
 }

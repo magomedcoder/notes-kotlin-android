@@ -7,6 +7,8 @@ import su.voo.notes.domain.AppRepository
 import androidx.lifecycle.LiveData
 import su.voo.notes.data.model.Note
 import androidx.lifecycle.asLiveData
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.launch
 
 @HiltViewModel
 class DetailViewModel @Inject constructor(
@@ -15,6 +17,12 @@ class DetailViewModel @Inject constructor(
 
     fun getOneNote(id: Int): LiveData<Note> {
         return repository.getOneNote(id).asLiveData()
+    }
+
+    fun deleteNote(note: Note) {
+        viewModelScope.launch {
+            repository.deleteNote(note)
+        }
     }
 
 }

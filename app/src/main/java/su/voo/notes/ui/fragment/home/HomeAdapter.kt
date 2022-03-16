@@ -22,7 +22,7 @@ class HomeAdapter(
                 cvNoteItem.setOnClickListener {
                     onMoveToDetail(note)
                 }
-                tvTitle.text = note.title
+                title.text = note.title
             }
         }
     }
