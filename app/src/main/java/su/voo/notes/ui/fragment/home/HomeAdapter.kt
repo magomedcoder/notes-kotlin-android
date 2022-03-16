@@ -25,6 +25,7 @@ class HomeAdapter(
                 }
                 title.text = note.title
                 date.text = getDateString(note.timestamp)
+                noteItem.setCardBackgroundColor(note.color!!)
             }
         }
     }

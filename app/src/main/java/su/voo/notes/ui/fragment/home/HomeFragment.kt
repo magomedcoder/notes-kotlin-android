@@ -32,8 +32,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             }
         }
         binding.apply {
-            rvNoteList.adapter = adapter
-            fabAddNote.setOnClickListener {
+            noteList.adapter = adapter
+            addNote.setOnClickListener {
                 findNavController().navigate(R.id.action_homeFragment_to_addFragment)
             }
             searchNote.setOnQueryTextListener(object : SearchView.OnQueryTextListener {

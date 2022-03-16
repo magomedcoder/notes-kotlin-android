@@ -12,7 +12,7 @@ import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.navigation.fragment.findNavController
 import su.voo.notes.R
-
+import androidx.core.content.ContextCompat
 @AndroidEntryPoint
 class AddFragment : BaseFragment<FragmentAddBinding>() {
 
@@ -42,7 +42,11 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
         viewModel.insertNote(
             Note(
                 title = binding.edTitle.text.toString(),
-                content = binding.edContent.text.toString()
+                content = binding.edContent.text.toString(),
+                color = ContextCompat.getColor(
+                    requireActivity(),
+                    Note.colors.random()
+                )
             )
         )
         findNavController().navigate(R.id.action_add_edit_to_home)

@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <color name="white">#FFFBFBFB</color>
     <color name="black">#FF000000</color>
     <color name="red">#FF0000</color>
     <color name="primary">#FFFFFF</color>
     <color name="secondary">#EDEDED</color>
-
+    <color name="darker_gray">#aaa</color>
+    <color name="item_orange">#FFFFCC80</color>
+    <color name="item_green">#FFE7ED9B</color>
+    <color name="item_red">#FFFFAB91</color>
+    <color name="item_purple">#FFCF94DA</color>
+    <color name="item_blue">#FF81DEEA</color>
+    <color name="item_alizarin_crimson">#E32636</color>
+    <color name="item_scarlet">#FF2400</color>
+    <color name="item_amaranth_purple">#AB274F</color>
 </resources>

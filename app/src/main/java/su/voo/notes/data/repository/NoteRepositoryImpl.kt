@@ -10,7 +10,13 @@ class NoteRepositoryImpl(
 
     override suspend fun insertNote(note: Note) {
         if (note.title.isEmpty()) {
-            dao.insertNote(Note(title = "Новая заметка", content = note.content))
+            dao.insertNote(
+                Note(
+                    title = "Новая заметка",
+                    content = note.content,
+                    color = note.color
+                )
+            )
         } else {
             dao.insertNote(note)
         }
@@ -22,7 +28,13 @@ class NoteRepositoryImpl(
 
     override suspend fun updateNote(note: Note) {
         if (note.title.isEmpty()) {
-            dao.updateNote(Note(title = "Новая заметка", content = note.content))
+            dao.updateNote(
+                Note(
+                    title = "Новая заметка",
+                    content = note.content,
+                    color = note.color
+                )
+            )
         } else {
             dao.updateNote(note)
         }
