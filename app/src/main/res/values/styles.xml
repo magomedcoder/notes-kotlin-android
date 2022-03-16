@@ -45,14 +45,14 @@
     </style>
 
     <style name="TitleTextStyling">
-        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textColorHint">@color/darker_gray</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/quattrosento_sans_regular</item>
         <item name="android:textSize">40sp</item>
     </style>
 
     <style name="ContentTextStyling">
-        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textColorHint">@color/darker_gray</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/quattrosento_sans_regular</item>
         <item name="android:textSize">20sp</item>

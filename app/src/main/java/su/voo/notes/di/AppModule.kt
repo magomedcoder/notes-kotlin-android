@@ -19,7 +19,7 @@ object AppModule {
     @Provides
     fun provideNoteDatabase(application: Application): NoteDatabase {
         return Room
-            .databaseBuilder(application, NoteDatabase::class.java, "voo_note_db")
+            .databaseBuilder(application, NoteDatabase::class.java, "su_voo_note_db")
             .build()
     }
 

@@ -12,10 +12,18 @@
         <action
             android:id="@+id/action_homeFragment_to_addFragment"
             app:destination="@id/add_edit"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
             app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_home_to_detail"
             app:destination="@id/detail"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right"
             app:popUpToInclusive="false" />
     </fragment>
     <fragment
@@ -26,6 +34,8 @@
         <action
             android:id="@+id/action_add_edit_to_home"
             app:destination="@id/home"
+            app:enterAnim="@anim/enter_anim_left"
+            app:exitAnim="@anim/exit_anim_left"
             app:popUpTo="@id/home"
             app:popUpToInclusive="true" />
         <argument
@@ -33,7 +43,6 @@
             android:defaultValue="0"
             app:argType="integer" />
     </fragment>
-
     <fragment
         android:id="@+id/detail"
         android:name="su.voo.notes.ui.fragment.detail.DetailFragment"
@@ -41,7 +50,11 @@
         tools:layout="@layout/fragment_detail">
         <action
             android:id="@+id/action_detail_to_add_edit"
-            app:destination="@id/add_edit" />
+            app:destination="@id/add_edit"
+            app:enterAnim="@anim/enter_anim_right"
+            app:exitAnim="@anim/exit_anim_right"
+            app:popEnterAnim="@anim/pop_enter_anim_right"
+            app:popExitAnim="@anim/pop_exit_anim_right" />
         <argument
             android:name="id"
             android:defaultValue="0"
@@ -49,6 +62,8 @@
         <action
             android:id="@+id/action_detail_to_home"
             app:destination="@id/home"
+            app:enterAnim="@anim/enter_anim_left"
+            app:exitAnim="@anim/exit_anim_left"
             app:popUpTo="@id/home"
             app:popUpToInclusive="true" />
     </fragment>

@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import su.voo.notes.R
 
-@Entity(tableName = "voo_note_db")
+@Entity(tableName = "su_voo_note_db")
 data class Note(
     @PrimaryKey
     val id: Int? = null,
@@ -19,10 +19,7 @@ data class Note(
             R.color.item_red,
             R.color.item_green,
             R.color.item_purple,
-            R.color.item_orange,
-            R.color.item_alizarin_crimson,
-            R.color.item_scarlet,
-            R.color.item_amaranth_purple,
+            R.color.item_orange
         )
     }
 }
