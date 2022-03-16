@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import su.voo.notes.databinding.AdapterItemBinding
+import su.voo.notes.utils.getDateString
 
 class HomeAdapter(
     private var onMoveToDetail: (Note) -> Unit,
@@ -19,10 +20,11 @@ class HomeAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(note: Note) {
             binding.apply {
-                cvNoteItem.setOnClickListener {
+                noteItem.setOnClickListener {
                     onMoveToDetail(note)
                 }
                 title.text = note.title
+                date.text = getDateString(note.timestamp)
             }
         }
     }

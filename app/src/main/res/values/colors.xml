@@ -3,7 +3,8 @@
 
     <color name="white">#FFFBFBFB</color>
     <color name="black">#FF000000</color>
+    <color name="red">#FF0000</color>
     <color name="primary">#FFFFFF</color>
-    <color name="secondary">#FF3B3B3B</color>
+    <color name="secondary">#EDEDED</color>
 
 </resources>

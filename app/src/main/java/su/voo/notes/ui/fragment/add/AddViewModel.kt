@@ -30,4 +30,5 @@ class AddViewModel @Inject constructor(
             repository.updateNote(note)
         }
     }
+
 }

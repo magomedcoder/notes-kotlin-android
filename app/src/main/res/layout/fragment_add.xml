@@ -27,12 +27,14 @@
             android:layout_gravity="end"
             android:contentDescription="Добавить заметку"
             android:padding="12dp"
-            android:src="@drawable/ic_done" />
+            android:src="@drawable/ic_done"
+            android:background="@drawable/background"/>
 
     </FrameLayout>
 
     <EditText
         android:id="@+id/edTitle"
+        style="@style/TitleTextStyling"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -42,6 +44,7 @@
 
     <EditText
         android:id="@+id/edContent"
+        style="@style/ContentTextStyling"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
