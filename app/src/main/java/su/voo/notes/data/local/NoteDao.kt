@@ -22,4 +22,7 @@ interface NoteDao {
     @Update
     suspend fun updateNote(note: Note)
 
+    @Query("SELECT * FROM voo_note_db WHERE title LIKE :searchQuery")
+    fun searchDatabase(searchQuery: String): Flow<List<Note>>
+
 }

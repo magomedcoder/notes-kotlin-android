@@ -27,4 +27,7 @@ class NoteRepositoryImpl(
             dao.updateNote(note)
         }
     }
+
+    override fun searchDatabase(searchQuery: String) = dao.searchDatabase(searchQuery)
+
 }

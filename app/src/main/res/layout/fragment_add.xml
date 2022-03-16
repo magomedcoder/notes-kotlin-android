@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:contentDescription="Назад"
             android:padding="12dp"
-            android:src="@drawable/ic_baseline_arrow_back" />
+            android:src="@drawable/ic_back" />
 
         <ImageView
             android:id="@+id/btnAddNote"
@@ -27,7 +27,7 @@
             android:layout_gravity="end"
             android:contentDescription="Добавить заметку"
             android:padding="12dp"
-            android:src="@drawable/ic_baseline_done" />
+            android:src="@drawable/ic_done" />
 
     </FrameLayout>
 

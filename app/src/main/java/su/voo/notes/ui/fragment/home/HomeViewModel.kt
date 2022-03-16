@@ -13,4 +13,8 @@ class HomeViewModel @Inject constructor(
 
     val notes = repository.getAllNotes().asLiveData()
 
+    fun searchDatabase(searchQuery: String) = repository
+        .searchDatabase(searchQuery)
+        .asLiveData()
+
 }

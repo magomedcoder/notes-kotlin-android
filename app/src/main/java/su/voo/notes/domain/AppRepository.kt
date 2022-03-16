@@ -13,4 +13,6 @@ interface AppRepository {
 
     suspend fun updateNote(note: Note)
 
+    fun searchDatabase(searchQuery: String): Flow<List<Note>>
+
 }
