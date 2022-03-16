@@ -12,6 +12,7 @@ import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.navigation.fragment.findNavController
 import su.voo.notes.R
+import android.widget.Toast
 
 @AndroidEntryPoint
 class DetailFragment : BaseFragment<FragmentDetailBinding>() {
@@ -31,6 +32,7 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>() {
                 btnDelete.setOnClickListener {
                     viewModel.deleteNote(note)
                     findNavController().navigate(R.id.action_detail_to_home)
+                    Toast.makeText(activity, "Заметка удалена", Toast.LENGTH_LONG).show()
                 }
             }
         }

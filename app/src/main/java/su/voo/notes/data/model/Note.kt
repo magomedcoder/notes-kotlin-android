@@ -15,10 +15,10 @@ data class Note(
 ) {
     companion object {
         val colors = listOf(
-            R.color.item_blue,
-            R.color.item_red,
-            R.color.item_green,
             R.color.item_purple,
+            R.color.item_blue,
+            R.color.item_green,
+            R.color.item_red,
             R.color.item_orange
         )
     }

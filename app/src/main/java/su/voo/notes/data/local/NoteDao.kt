@@ -7,13 +7,14 @@ import su.voo.notes.data.model.Note
 import androidx.room.Insert
 import androidx.room.Update
 import androidx.room.Delete
+
 @Dao
 interface NoteDao {
 
     @Insert
     suspend fun insertNote(note: Note)
 
-    @Query("SELECT * FROM su_voo_note_db")
+    @Query("SELECT * FROM su_voo_note_db ORDER BY timestamp DESC")
     fun getAllNotes(): Flow<List<Note>>
 
     @Query("SELECT * FROM su_voo_note_db WHERE id =:id")

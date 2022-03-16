@@ -18,26 +18,37 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="12dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/title"
                 style="@style/Headline"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_gravity="top"
                 android:layout_weight="1"
-                android:autoSizeMaxTextSize="40sp"
+                android:autoSizeMaxTextSize="20sp"
                 android:autoSizeMinTextSize="12sp"
                 android:autoSizeStepGranularity="2sp"
                 android:autoSizeTextType="uniform"
                 tools:text="Название" />
 
             <TextView
+                android:id="@+id/content"
+                style="@style/TitleTextStyling"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                tools:text="Контент" />
+
+            <TextView
                 android:id="@+id/date"
                 style="@style/Secondary.b1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
                 android:gravity="bottom"
                 android:paddingStart="8dp"
                 tools:ignore="RtlSymmetry"

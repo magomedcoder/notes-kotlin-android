@@ -13,6 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import androidx.navigation.fragment.findNavController
 import su.voo.notes.R
 import androidx.core.content.ContextCompat
+import android.widget.Toast
 
 @AndroidEntryPoint
 class AddFragment : BaseFragment<FragmentAddBinding>() {
@@ -51,6 +52,7 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
             )
         )
         findNavController().navigate(R.id.action_add_edit_to_home)
+        Toast.makeText(activity, "Заметка сохранена", Toast.LENGTH_LONG).show()
     }
 
     private fun bindUpdate(note: Note) {
@@ -73,6 +75,7 @@ class AddFragment : BaseFragment<FragmentAddBinding>() {
             )
         )
         findNavController().navigate(R.id.action_add_edit_to_home)
+        Toast.makeText(activity, "Заметка изменена", Toast.LENGTH_LONG).show()
     }
 
     override fun initBinding(

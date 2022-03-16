@@ -24,6 +24,7 @@ class HomeAdapter(
                     onMoveToDetail(note)
                 }
                 title.text = note.title
+                content.text = note.content
                 date.text = getDateString(note.timestamp)
                 noteItem.setCardBackgroundColor(note.color!!)
             }
