@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Заметки</string>
+    <string name="create">Создать</string>
+    <string name="back">Назад</string>
+    <string name="remove">Удалить</string>
+    <string name="edit">Редактировать</string>
+    <string name="last_modified">Последние изменения: 00 00 0000</string>
+    <string name="add_note">Добавить заметку</string>
+    <string name="name">Название</string>
+    <string name="note_content">Заметка…</string>
 </resources>

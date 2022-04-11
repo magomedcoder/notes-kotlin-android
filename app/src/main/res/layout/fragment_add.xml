@@ -16,7 +16,7 @@
             android:id="@+id/btnGoBack"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:contentDescription="Назад"
+            android:contentDescription="@string/back"
             android:padding="12dp"
             android:src="@drawable/ic_back" />
 
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="end"
-            android:contentDescription="Добавить заметку"
+            android:contentDescription="@string/add_note"
             android:padding="12dp"
             android:src="@drawable/ic_done"
             android:background="@drawable/background"/>
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@null"
-        android:hint="Название"
+        android:hint="@string/name"
         android:minHeight="48dp" />
 
     <EditText
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@null"
-        android:hint="Заметка…"
+        android:hint="@string/note_content"
         android:minHeight="48dp" />
 
 </LinearLayout>

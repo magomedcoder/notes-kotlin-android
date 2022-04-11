@@ -6,7 +6,7 @@
     app:startDestination="@id/home">
     <fragment
         android:id="@+id/home"
-        android:name="su.voo.notes.ui.fragment.home.HomeFragment"
+        android:name="ru.magomedcoder.notes.ui.fragment.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/add_edit"
-        android:name="su.voo.notes.ui.fragment.add.AddFragment"
+        android:name="ru.magomedcoder.notes.ui.fragment.add.AddFragment"
         android:label="fragment_add"
         tools:layout="@layout/fragment_add">
         <action
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/detail"
-        android:name="su.voo.notes.ui.fragment.detail.DetailFragment"
+        android:name="ru.magomedcoder.notes.ui.fragment.detail.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail">
         <action

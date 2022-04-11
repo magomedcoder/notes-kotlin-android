@@ -10,7 +10,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "su.voo.notes"
+        applicationId "ru.magomedcoder.notes"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -61,8 +61,8 @@ dependencies {
     kapt 'androidx.hilt:hilt-compiler:1.0.0'
 
     // Navigation Component
-    implementation "androidx.navigation:navigation-fragment-ktx:2.4.1"
-    implementation "androidx.navigation:navigation-ui-ktx:2.4.1"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.4.2"
+    implementation "androidx.navigation:navigation-ui-ktx:2.4.2"
 
     // Room
     implementation 'androidx.room:room-ktx:2.4.2'
